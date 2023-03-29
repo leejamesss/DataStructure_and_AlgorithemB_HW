@@ -26,8 +26,8 @@
 
 感谢以下贡献者为本仓库做出的贡献：
 
-- [xxx](https://github.com/xxx)
-- [yyy](https://github.com/yyy)
+- [james](https://github.com/leejamesss)
+
 
 ## 讨论
 
