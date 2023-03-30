@@ -30,7 +30,7 @@
 感谢以下贡献者为本仓库做出的贡献：
 
 - [james](https://github.com/leejamesss)
-- [wellington](https://github.com/acodefarmer408)
+- [wellington](https://github.com/acodefarmer048)
 
 
 ## 讨论
