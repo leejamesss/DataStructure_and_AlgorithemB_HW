@@ -29,3 +29,7 @@ for i in range(n):
         print(f"Data set {i+1}: yes")
     else:
         print(f"Data set {i+1}: no")
+
+#使用滚动数组
+#状态的设计：i表示前i个字母，j表示前j个字母，能否组成c的前i+j个字母
+#最后返回dp[-1]即可
