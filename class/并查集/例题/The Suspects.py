@@ -8,7 +8,7 @@
 
 MAX=30000
 parent=[0 for i in range(MAX+10)]
-total=[0 for i in range(MAX+10)]                        #total记录的是得病集合的人数
+total=[0 for i in range(MAX+10)]                        #total记录的是以i为树根的得病集合的人数
 #total[GetRoot(a)]是a 所在的group的人数
 def GetRoot(a):
   if parent[a]!=a:
@@ -20,8 +20,9 @@ def Merge(a,b):
   p2=GetRoot(b)
   if p1=p2:
     return
-  total[p1]+=total[p2]
-  parent[p2]=p1
+  total[p1]+=total[p2]                                  #维护了total
+  parent[p2]=p1                                         #p2合并到p1下面
+
   
 while True:
   n,m=list(map(int,input().split()))
@@ -36,5 +37,5 @@ while True:
     h=lst[1]
     for j in range(2,k+1):
       Merge(h,lst[j])
-    print(total[GetRoot(0)])
+    print(total[GetRoot(0)])                            #total(0)和parent(0)[需要路径压缩后]不行，因为不一定是树根
     
