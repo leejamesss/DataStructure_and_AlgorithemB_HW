@@ -28,3 +28,6 @@ def binaryTreeToTree(biTree):
       tree.addSubTree(binaryTreeToTree(son.right))
       son=son.right
   return tree
+
+
+#实质：树的左边比较优先，能够成为老大，在儿子兄弟表示法中可以成为父亲
