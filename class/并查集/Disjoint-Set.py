@@ -49,6 +49,11 @@ def Merge(a,b):
 def Query(a,b):
   #查询a，b是否位于同一棵树
   return GetRoot(a)==GetRoot(b)
+#GetRoot的时间复杂度(log(n))
+
+#3、结合1、2两种方法：
+#GetRoot复杂度差不多为O(1)
+
 
 
 #查询一次后就改造树,全部改造成直系亲属，树的深度<=2
