@@ -6,14 +6,15 @@
 # 开始只有0号学生得病。已知每个团体都由哪些学生
 # 构成， 求最终一共多少个学生会得病。
 
-MAX=300000
+MAX=30000
 parent=[0 for i in range(MAX+10)]
-total=[0 for i in range(MAX+10)]
+total=[0 for i in range(MAX+10)]                        #total记录的是得病集合的人数
 #total[GetRoot(a)]是a 所在的group的人数
 def GetRoot(a):
   if parent[a]!=a:
     parent[a]=GetRoot(parent[a])
   return parent[a]
+
 def Merge(a,b):
   p1=GetRoot(a)
   p2=GetRoot(b)
@@ -21,13 +22,14 @@ def Merge(a,b):
     return
   total[p1]+=total[p2]
   parent[p2]=p1
+  
 while True:
   n,m=list(map(int,input().split()))
   if n==0 and m==0:
     break
   for i in range(n):
     parent[i]=i
-    total[i]=i
+    total[i]=1                                          #每个人自成一个集合
   for i in range(m):
     lst=list(map(int,input.split()))
     k=lst[0]
