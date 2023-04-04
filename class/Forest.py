@@ -7,4 +7,13 @@ def woodToBinaryTree(woods):
     p.addRight(woods[i])                           #指针增加这个
     p=p.right
   return biTree
-def binaryTree
+
+#二叉树转森林
+def binaryTreeToWoods(tree):
+  p=tree
+  q=p.right
+  p.right=None
+  woods=[p]
+  if q:
+    woods+=binaryTreeToWoods(q)
+  return woods
