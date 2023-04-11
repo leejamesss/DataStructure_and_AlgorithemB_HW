@@ -32,12 +32,19 @@ def insertionRebalence(self,nd):
   if nd.bf==2:
     if nd.left.bf==1:
       self.rotateLL(nd)
+    elif nd.left.bf==1:
+      self.rotateLR(nd)
+  if nd.bf==-2:
+    if nd.right.bf==-1:
+      self.rotateRR(nd)
+    else:
+      self.rotateRL(nd)
       
 
       
       
       
-# Update   log(n)
+# upgradeBalence操作是沿着添加的叶子节点到树根的路径进行的，所以复杂度是 log(n)
 # 旋转：O(1),是修改指针，旋转最多做一次
 
 #堆和字典可以代替大部分AVL（平衡二叉树）的场景
