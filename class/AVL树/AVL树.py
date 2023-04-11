@@ -38,4 +38,6 @@ def insertionRebalence(self,nd):
       
       
 # Update   log(n)
-# 旋转：O(1),是修改指针
+# 旋转：O(1),是修改指针，旋转最多做一次
+
+
