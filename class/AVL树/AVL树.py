@@ -21,6 +21,21 @@ def insertionUpdataBF(nd):           #插入过程修改nd的祖先BF
   #新增的节点位于v的左子树的左子树
 # 2、RR旋转
   #新增的节点位于V的右子树的右子树
-# 3、LR
-  #新增的节点位于V的
+  #BF=-2，BF=-1
+# 3、LR旋转
+  #新增的节点位于V的左子树的右子树
 # 4、LR
+  #新增的节点位于V的右子树的左子树
+#注意之间的大小关系需要仍然满足二叉排序树
+
+def insertionRebalence(self,nd):
+  if nd.bf==2:
+    if nd.left.bf==1:
+      self.rotateLL(nd)
+      
+
+      
+      
+      
+# Update   log(n)
+# 旋转：O(1),是修改指针
