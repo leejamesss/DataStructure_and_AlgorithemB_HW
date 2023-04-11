@@ -3,9 +3,9 @@ class Candy:
   def __init__(self,v=0,w=0):
     self.v=v
     self.w=w
-    
   def __lt__(self,other):
     return (self.v/self.w-other.v/other.w)>eps
+  
 n,w=list(map(int,input().split()))
 candies=[Candy() for i in range(n)]
 for i in range(n):
