@@ -6,7 +6,7 @@ class Candy:
     
   def __lt__(self,other):
     return (self.v/self.w-other.v/other.w)>eps
-n,w=list(map(int,input().split())
+n,w=list(map(int,input().split()))
 candies=[Candy() for i in range(n)]
 for i in range(n):
   candies[i].v,candies[i].w=list(map(float,input().split()))
