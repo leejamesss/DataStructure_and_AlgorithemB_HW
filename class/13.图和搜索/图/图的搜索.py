@@ -28,5 +28,5 @@ def dfsTravel(G,op):
     if not visited[i]:
       dfs(i)
       
-  
+#每个顶点看过一遍，每条边看过一遍(无向图两遍) ，复杂度O(E+V),E是边数,V是顶点数 
   
