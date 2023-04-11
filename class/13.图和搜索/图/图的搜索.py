@@ -30,3 +30,53 @@ def dfsTravel(G,op):
       
 #每个顶点看过一遍，每条边看过一遍(无向图两遍) ，复杂度O(E+V),E是边数,V是顶点数 
   
+#图的深搜：邻接矩阵形式
+def dfsTravel(G,op):
+  def dfs(v):
+    visited[v]=True
+    op(v)
+    for i  in range(n):
+      if G[v][i] and not visited[i]:
+        dfs(i)
+  n=len(G)
+  visited=[False for i in range(n)]
+  for i in range(n):
+    if not visited[i]:
+      dfs(i)
+      
+      
+      
+      
+ #非递归写法     
+def dfsTravel3(G,op):
+  n=len(G)
+  visited=[False for i in range(n)]
+  for x in range(n):
+    if not visited[x]:
+      stack=[[x,0]]
+      visited[x]=True
+      while len(stack)>0:
+        nd=stack[-1]
+        v=nd[0]
+        if nd[1]==0:
+          op(v)
+        if nd[1]==len(G[v]):
+          stack.pop()
+        else:
+          for i in range(nd[1],len(G[v])):
+            u=G[v][i]
+            nd[1]+=1
+            if not visited[u]:
+              stack.append([u,0])
+              visited[u]=True
+              break
+              
+          
+          
+       
+          
+          
+          
+          
+          
+      
