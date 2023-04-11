@@ -29,7 +29,8 @@ def dfsTravel(G,op):
       dfs(i)
       
 #每个顶点看过一遍，每条边看过一遍(无向图两遍) ，复杂度O(E+V),E是边数,V是顶点数 
-  
+
+
 #图的深搜：邻接矩阵形式
 def dfsTravel(G,op):
   def dfs(v):
@@ -44,7 +45,7 @@ def dfsTravel(G,op):
     if not visited[i]:
       dfs(i)
       
-      
+#复杂度：每个顶点v要做dfs(v),做一次要O(V),总复杂度为O(v^2)    
       
       
  #非递归写法     
@@ -77,6 +78,14 @@ def dfsTravel3(G,op):
   #3） 找出x的所有未访问的邻点，将它们标记未访问过，入队列，
   #4）goto 2)
   
+  #因为图可能不连通（有向图），或者不是强连通（无向图），队列为空的时候，可能还有顶点没有访问过
+  
+  
+  #图的广度优先遍历--邻接表形式
+  def bfsTravel(G,op):
+    import collections 
+    n=len(G)
+    
        
           
           
